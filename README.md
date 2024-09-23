@@ -17,7 +17,8 @@
     
         ![1](src/img/0.png)
 
-**TASK :** :white_check_mark:
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
 
 ---
 
@@ -46,7 +47,8 @@
 
         ![1](src/img/1-1.png)
 
-**TASK :** :white_check_mark:
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
 
 ---
 
@@ -70,7 +72,8 @@
 
         ![1](src/img/2-1.png)
 
-**TASK :** :white_check_mark:
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
 
 ---
 
@@ -107,7 +110,8 @@
     - The path is given in the instance of the class as parameter 
     ![1](src/img/3-7.png)
 
-**TASK :** :white_check_mark:
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
 
 ---
 
@@ -124,7 +128,8 @@
 
         ![1](src/img/4-2.png)
 
-**TASK :** :white_check_mark:
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
 
 ---
 
@@ -161,7 +166,8 @@
     - The output of the main file at the prompt are the fallowing:
         ![1](src/img/5-7.png)
 
-**TASK :** :white_check_mark:
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
 
 --- 
 
@@ -179,7 +185,8 @@
             
         ![1](src/img/6-2.png)
 
-**TASK :** :white_check_mark:
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
 
 --- 
 
@@ -201,3 +208,36 @@
 
     - We creare the READMEmd that que make the cover of our git/hub project. For this file we use a "markdown" lenguaje wich is idoneous for descriptions of git/hub repositories.
         ![1](src/img/7-4.png)
+
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
+
+--- 
+
+8. Push the Project to GitHub
+
+    * Initialize a Git repository in the project folder:
+
+        * git init
+        ![1](src/img/8-1.png)
+        * git add .
+        ![1](src/img/8-2.png)
+        * git commit -m "Initial project setup for MySQLConnector class with credentials management"
+        ![1](src/img/8-3.png)
+
+    * Create a GitHub repository and push the local repository to GitHub:
+
+        * git remote add origin <your_github_repository_url>
+        ![1](src/img/8-4.png)
+        * git push -u origin master
+        ![1](src/img/8-5.png)
+
+**Task:** 
+* Push the entire project to GitHub and ensure the repository is public for review.
+
+    - The repository are now on-line with all the steps and documentation to the peer review stage:
+        ![1](src/img/8-6.png)
+
+| **TASK**    | :white_check_mark: |
+| :---        |               ---: |
+---
