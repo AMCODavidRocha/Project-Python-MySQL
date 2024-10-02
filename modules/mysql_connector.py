@@ -1,5 +1,7 @@
 import mysql.connector
+import couchdb
 import yaml
+import os
 import pandas as pd
 class Conexion:
     
@@ -31,3 +33,35 @@ class Conexion:
     def close_connection(self):
         self.cursor.close()
         self.conector.close()
+
+class Conexion_cdb:
+    def __init__ (self, path):
+        with open(path) as file:
+            yamll = yaml.safe_load(file)
+        system = os.name
+        if system == "nt":    
+            self.user = yamll['couchdbW']['user']
+            self.pw = yamll['couchdbW']['password']
+            self.couch =  couchdb.Server(f'http://{self.user}:{self.pw}@127.0.0.1:5984/')
+            self.db =""
+        else:
+            self.user = yamll['couchdbM']['user']
+            self.pw = yamll['couchdbM']['password']
+            self.couch =  couchdb.Server(f'http://{self.user}:{self.pw}@127.0.0.1:5984/')
+            self.db =""
+
+    def get_connection(self,db):
+        if db in self.couch:
+            self.db = self.couch[db]
+            print(f"Accediendo a la base de datos '{self.db}'")
+        else:
+            db = self.couch.create('personas')
+            print(f'Base creada: {db}')
+    
+    def mango(self, mango_query):
+        r = self.db.find(mango_query)
+        return r
+    
+    def vista(self, vista):
+        r = self.db.view(vista)
+        return r

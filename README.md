@@ -241,3 +241,10 @@
 | **TASK**    | :white_check_mark: |
 | :---        |               ---: |
 ---
+
+# CouchDB
+***We agregated a class with conection, selection of DB and two querys, one qith mango and another using views created at fauxton for the CouchDB porject and a conditions in the main for a OS selection and a Mysql o CouchDB iteraction.***
+* Main
+    ![1](src/img/couchdb-1.png)
+* Class
+    ![1](src/img/couchdb-2.png)
