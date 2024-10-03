@@ -2,3 +2,7 @@
 **/cd
 **/cd.pub
 **/cred
+__pycache__/
+**/__pycache__/
+**/modules/__ini__.py
+**/modules/__pycache__/mysql_connector.cpython-312.pyc
