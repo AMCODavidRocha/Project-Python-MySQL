@@ -1,8 +1,10 @@
 from modules.mysql_connector import Conexion
 from modules.mysql_connector import Conexion_cdb
+from modules.mysql_connector import Conexion_bq
+import pandas as pd
 path = 'database_connections_project/cred/db_credentials.yaml'
 
-opcion = input("MySQL/CouchDB [M/C?]").lower()
+opcion = input("MySQL/CouchDB/BigQuery [M/C/B?]").lower()
 if opcion == "m":
     print(">>>>>>>>>>MySQL")
 
@@ -53,5 +55,12 @@ elif opcion == "c":
         print(fila.key, fila.value)
 
     print("CouchDB<<<<<<<<<<")
+elif opcion == "b":
+    print(">>>>>>>>>>BigQuery")
+    conexion = Conexion_bq()
+    print(conexion)
+    r = conexion.bigquery()
+    print(r)
+    print("BigQuery<<<<<<<<<<")
 else:
     print("Opcion incorrecta...")

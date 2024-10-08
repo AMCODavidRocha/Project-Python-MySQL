@@ -6,3 +6,8 @@ scikit-learn
 matplotlib
 mysql-connector-python
 CouchDB
+pathlib
+google-cloud
+google-auth
+google-cloud-bigquery
+google-cloud-bigquery[pandas]

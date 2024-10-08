@@ -2,7 +2,10 @@ import mysql.connector
 import couchdb
 import yaml
 import os
+from pathlib import Path
 import pandas as pd
+from google.cloud import bigquery
+from google.oauth2 import service_account
 class Conexion:
     
     def __init__ (self, path):
@@ -65,3 +68,18 @@ class Conexion_cdb:
     def vista(self, vista):
         r = self.db.view(vista)
         return r
+    
+class Conexion_bq:
+    def __init__ (self):
+        apath = "/Users/davidrocha/Desktop/AMCO/database_connections_project/cred/keys.json"
+        rpath = "/database_connections_project/cred/keys.json"
+        self.path = apath
+        self.creds = service_account.Credentials.from_service_account_file(self.path)
+        self.client = bigquery.Client(credentials = self.creds, project = self.creds.project_id)
+
+    def bigquery(self):
+        bg_query = 'SELECT id, nombre FROM training_bq.personas'
+        rquery = self.client.query(bg_query) 
+        df = rquery.to_dataframe()
+        df.set_index('id', inplace=True)
+        return df

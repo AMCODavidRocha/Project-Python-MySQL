@@ -5,4 +5,6 @@
 __pycache__/
 **/__pycache__/
 **/modules/__ini__.py
-**/modules/__pycache__/mysql_connector.cpython-312.pyc
+modules/__pycache__/mysql_connector.cpython-312.pyc
+**/database_connections_project/modules/__pycache__
+*.pyc
